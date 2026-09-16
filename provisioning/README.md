@@ -53,7 +53,7 @@ python stage_models.py --env-file .env --include-gated --only sam3   # needs HF_
 | `MANO_RIGHT.pkl` | Register at <https://mano.is.tue.mpg.com> (non-commercial, no redistribution). | `models/MANO_RIGHT.pkl` (cache root) |
 | `SMPLX_NEUTRAL.pkl` | Register at <https://smpl-x.is.tue.mpg.com>. | `models/SMPLX_NEUTRAL.pkl` (cache root) |
 | DeepCalib `weights_10_0.02.h5` | From the authors (no license declaration, no HF release). | `models/alexvbogdan_DeepCalib/` |
-| VINS-Adapter | Official release (GPL-3.0): `https://github.com/xpark-community/vins-adapter/releases/download/v0.1.0/vins_adapter-linux-x86_64.tar.gz` | `models/vins_adapter/` (extracted) + the tarball |
+| VINS-Adapter | Community adapter (GPL-3.0): `https://github.com/xpark-community/vins-adapter/releases/download/v0.1.0/vins_adapter-linux-x86_64.tar.gz` | `models/vins_adapter/` (extracted) + the tarball |
 | CREStereo `crestereo.pth` | <https://github.com/megvii-research/CREStereo> pretrained (no HF release). | `models/crestereo.pth` |
 | RAFT-Stereo `.pth` | <https://github.com/princeton-vl/RAFT-Stereo> releases (per-scene). | `models/raft_stereo_<scene>.pth` |
 | URDF robot descriptions | Per-robot asset; pass directly to the operator (local path or `cos://`/`s3://` URI), no staging needed. | — |
