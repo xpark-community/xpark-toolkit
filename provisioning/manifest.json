@@ -1,0 +1,53 @@
+{
+  "models": [
+    {
+      "repo_id": "Ultralytics/YOLO11",
+      "files": ["yolo11n.pt", "yolo11s.pt", "yolo11m.pt"],
+      "note": "yolo11n/s/m weights (AGPL-3.0, network-service copyleft); three variants share one repo"
+    },
+    {
+      "repo_id": "depth-anything/Video-Depth-Anything-Large",
+      "note": "CC-BY-NC-4.0, commercial use forbidden"
+    },
+    {
+      "repo_id": "xiao1001/WiLoR-mini",
+      "note": "CC-BY-NC-ND (no commercial use, no derivatives)"
+    },
+    {
+      "repo_id": "facebook/sam3",
+      "gated": true,
+      "ms_repo_id": null,
+      "note": "custom license + gated (manual review): needs HF_TOKEN of an authorized account + --include-gated"
+    }
+  ],
+  "manual": [
+    {
+      "name": "MANO_RIGHT.pkl",
+      "note": "non-commercial research license; MPI registration: https://mano.is.tue.mpg.com -> place at the mount root"
+    },
+    {
+      "name": "SMPLX_NEUTRAL.pkl",
+      "note": "non-commercial research license, no redistribution; registration: https://smpl-x.is.tue.mpg.com"
+    },
+    {
+      "name": "DeepCalib (weights_10_0.02.h5)",
+      "note": "no license declaration, no HF release; obtain from the authors and stage manually"
+    },
+    {
+      "name": "VINS-Adapter (vins_adapter)",
+      "note": "GPL-3.0; official release tarball: https://github.com/xpark-community/vins-adapter/releases/download/v0.1.0/vins_adapter-linux-x86_64.tar.gz"
+    },
+    {
+      "name": "CREStereo (crestereo.pth)",
+      "note": "no official HF release; obtain from megvii-research/CREStereo and stage manually"
+    },
+    {
+      "name": "RAFT-Stereo weights",
+      "note": "no official HF release; obtain from princeton-vl/RAFT-Stereo and stage manually"
+    },
+    {
+      "name": "URDF robot descriptions",
+      "note": "per-robot asset: local path or cos:// / s3:// URI"
+    }
+  ]
+}
