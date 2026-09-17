@@ -44,7 +44,7 @@ from urllib.parse import urlparse
 
 #: Refuse buckets that look like shared CI/baseline data: staging into them
 #: would poison the read-only reference data.
-FORBIDDEN_BUCKET_MARKERS = ("xpark-ci-cos",)
+FORBIDDEN_BUCKET_MARKERS = ("xpark-cache", "xpark_cache")
 
 #: Default local scratch dir (override with --workdir).
 DEFAULT_WORKDIR = Path.home() / ".cache" / "xpark-toolkit" / "staging"
