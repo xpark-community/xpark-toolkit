@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Stage model weights onto COS.
 
 Downloads a manifest of model repos from ModelScope (preferred inside CN
@@ -67,7 +66,7 @@ class ManifestEntry:
     ms_repo_id: str | None = ""
 
     @classmethod
-    def from_dict(cls, data: dict) -> "ManifestEntry":
+    def from_dict(cls, data: dict) -> ManifestEntry:
         """Build an entry from a manifest-json item.
 
         ``cache_name`` and ``ms_repo_id`` are optional; the former defaults to
@@ -121,7 +120,7 @@ def load_manifest(path: Path) -> tuple[list[ManifestEntry], list[tuple[str, str]
     """
     data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict) or not isinstance(data.get("models"), list):
-        raise ValueError("manifest must be an object with a 'models' list")
+        raise TypeError("manifest must be an object with a 'models' list")
     entries = [ManifestEntry.from_dict(item) for item in data["models"]]
     if not entries:
         raise ValueError("manifest has an empty 'models' list")
@@ -196,7 +195,7 @@ def download_entry(entry: ManifestEntry, workdir: Path) -> tuple[Path, str]:
     try:
         _download_huggingface(entry.repo_id, entry.files, local)
         return local, "huggingface"
-    except Exception as exc:  # noqa: BLE001 - reported to the caller
+    except Exception as exc:
         errors.append(f"huggingface({entry.repo_id}): {exc}")
         raise RuntimeError("; ".join(errors)) from exc
 
